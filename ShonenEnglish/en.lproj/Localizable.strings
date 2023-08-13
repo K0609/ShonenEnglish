@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  ShonenEnglish
+
+  Created by Misawa Kazushi on 2023/08/01.
+  
+*/
+
+"LEVEL" = "LEVEL";
+"Random" = "Random";
+"MODE" = "MODE";
+"WORD" = "WORD";
+"QUOTE" = "QUOTE";
+"START" = "START";
+"NEXT" = "NEXT";
+"AGAIN" = "AGAIN";
+
