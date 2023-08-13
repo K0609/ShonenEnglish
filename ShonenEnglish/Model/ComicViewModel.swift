@@ -30,8 +30,9 @@ class ComicViewModel: ObservableObject {
     }
     
     // Cloud Storageから画像をロードするメソッド
-    func loadImageFromStorage(imageName: String, completion: @escaping (UIImage?) -> Void) {
-        let imageRef = storage.reference(withPath: "quoteImages/\(imageName)") //Storageパスを記入
+    func loadImageFromStorage(imageID: Int, completion: @escaping (UIImage?) -> Void) {
+        let imageName = String(format: "%05d.png", imageID)  // 整数を5桁の文字列に変換して.pngを追加
+        let imageRef = storage.reference(withPath: "images_quote/\(imageName)") //Storageパスを記入
         imageRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
             if let error = error {
                 print("Error downloading image: \(error)")
@@ -49,7 +50,7 @@ class ComicViewModel: ObservableObject {
         self.comicDataList = Array(allComicDataList.shuffled().prefix(10))
         // After loading the comic data, load the images
         for (index, comicData) in comicDataList.enumerated() {
-            loadImageFromStorage(imageName: "\(comicData.quoteID).jpg") { image in
+            loadImageFromStorage(imageID: comicData.quoteID) { image in
                 if let image = image {
                     self.comicDataList[index].image = image
                 } else {
@@ -58,14 +59,14 @@ class ComicViewModel: ObservableObject {
             }
         }
     }
-    
+
     // 指定されたwordLevelでデータをフィルタリングするメソッドを追加
     func loadComicsWithWordLevel(level: Int) {
         let filteredComicDataList = allComicDataList.filter { $0.wordLevel == level }
         self.comicDataList = Array(filteredComicDataList.shuffled().prefix(10))
         // After loading the comic data, load the images
         for (index, comicData) in comicDataList.enumerated() {
-            loadImageFromStorage(imageName: "\(comicData.quoteID).jpg") { image in
+            loadImageFromStorage(imageID: comicData.quoteID) { image in
                 if let image = image {
                     self.comicDataList[index].image = image
                 } else {
