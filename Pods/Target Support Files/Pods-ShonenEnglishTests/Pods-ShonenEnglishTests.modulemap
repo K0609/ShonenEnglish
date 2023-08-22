@@ -1,0 +1,6 @@
+framework module Pods_ShonenEnglishTests {
+  umbrella header "Pods-ShonenEnglishTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
