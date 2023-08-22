@@ -1,10 +1,12 @@
 import SwiftUI
 import AVFoundation
+import GoogleMobileAds
 
 struct View2: View {
     @EnvironmentObject var comicViewModel: ComicViewModel
     let comicData: ComicData
     @StateObject private var speechSynthesizer = SpeechSynthesizer()
+    @State private var bannerAdView: GADBannerView = GADBannerView(adSize: GADAdSizeBanner)
 
     var body: some View {
         GeometryReader { geometry in
@@ -63,9 +65,17 @@ struct View2: View {
                             .padding(.bottom, 5)
                             
                             //セリフ
-                            QuoteView(quote: comicData.quoteJa, language: "ja-JP")
+                            QuoteView(quote: comicData.quoteJa,
+                                      language: "ja-JP",
+                                      highlightWords: comicData.quoteJaHighlight,
+                                      highlightWordsSub: comicData.quoteJaHighlightSub
+                            )
                                 .padding(.bottom, 10)
-                            QuoteView(quote: comicData.quoteEn, language: "en-US")
+                            QuoteView(quote: comicData.quoteEn,
+                                      language: "en-US",
+                                      highlightWords: comicData.quoteEnHighlight,
+                                      highlightWordsSub: comicData.quoteEnHighlightSub
+                            )
                                 .padding(.bottom, 10)
                             
                             //キャラクター名
@@ -151,6 +161,7 @@ struct View2: View {
 //                .frame(minHeight: geometry.size.height)
             }
         }
+        .analyticsScreen(name: "main_content")
     }
 }
 
@@ -176,30 +187,44 @@ struct CardView<Content: View>: View {
 struct QuoteView: View {
     let quote: String
     let language: String
+    let highlightWords: [String]
+    let highlightWordsSub: [String]
     @StateObject private var speechSynthesizer = SpeechSynthesizer()
-    
+
     var body: some View {
         HStack(alignment: .top) {
-            
-            Button(action: {
-                BarVisibilityPublisher.shared.ChangeBarVisibility()
-                speechSynthesizer.speak(quote, language: language)
-            }) {
-                Image(systemName: "speaker.wave.3.fill")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 20, height: 20)
-            }
-            .font(.body)
-            
-            Text(quote)
+            // Speaker Button
+            speakerButton
+
+            // Quote Text
+            highlightSwiftUIText()
                 .font(.body)
                 .bold()
-                .fixedSize(horizontal: false, vertical: true)
-                .minimumScaleFactor(0.5)
                 .layoutPriority(1)
+                .lineLimit(nil) // 無限の行数を許可
+
             Spacer(minLength: 5)
         }
+    }
+    
+    // 指定文字列のハイライト
+    private func highlightSwiftUIText() -> some View {
+        let highlighter = TextHighlighter(quote: quote, highlightWords: highlightWords, highlightWordsSub: highlightWordsSub)
+        return highlighter.highlightedText().reduce(Text(""), +)
+    }
+
+    // 発音機能のスピーカーアイコンのボタン
+    private var speakerButton: some View {
+        Button(action: {
+            BarVisibilityPublisher.shared.ChangeBarVisibility()
+            speechSynthesizer.speak(quote, language: language)
+        }) {
+            Image(systemName: "speaker.wave.3.fill")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 20, height: 20)
+        }
+        .font(.body)
     }
 }
 

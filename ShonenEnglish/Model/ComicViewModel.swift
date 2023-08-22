@@ -16,7 +16,7 @@ class ComicViewModel: ObservableObject {
     
     // Firestoreからデータのロードとデータモデルへの変換
     func loadFirestoreData() {
-        db.collection("comicData").getDocuments() { (querySnapshot, err) in
+        db.collection("comicData_ver1.1").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {

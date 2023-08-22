@@ -1,4 +1,5 @@
 import SwiftUI
+import FirebaseAnalyticsSwift
 
 struct StartView: View {
     @EnvironmentObject var comicViewModel: ComicViewModel
@@ -107,5 +108,6 @@ struct StartView: View {
                            selectedModeWorS: selectedModeWorS
             )
         }
+        .analyticsScreen(name: "main_content")
     }
 }

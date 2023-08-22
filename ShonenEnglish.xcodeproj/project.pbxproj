@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1ED7D3BF017E016FC76197FB /* Pods_ShonenEnglish_ShonenEnglishUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C98EC2B255AB871D7CFDF28 /* Pods_ShonenEnglish_ShonenEnglishUITests.framework */; };
 		4907D5032A10502600F8C3BB /* ShonenEnglishApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4907D5022A10502600F8C3BB /* ShonenEnglishApp.swift */; };
 		4907D5072A10502700F8C3BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4907D5062A10502700F8C3BB /* Assets.xcassets */; };
 		4907D50B2A10502700F8C3BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4907D50A2A10502700F8C3BB /* Preview Assets.xcassets */; };
@@ -28,11 +29,16 @@
 		495B80C32A785E5E006CA0D1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 495B80C52A785E5E006CA0D1 /* Localizable.strings */; };
 		495B80C92A7C6913006CA0D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 495B80CB2A7C6913006CA0D1 /* InfoPlist.strings */; };
 		497967782A886AB600019F83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 497967772A886AB600019F83 /* GoogleService-Info.plist */; };
+		4979677A2A8CFDB000019F83 /* AdMobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497967792A8CFDB000019F83 /* AdMobView.swift */; };
+		4979677C2A8D785200019F83 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4979677B2A8D785200019F83 /* FirebaseAnalyticsSwift */; };
 		4990FDA02A8719D300769B17 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4990FD9F2A8719D300769B17 /* ColorModel.swift */; };
+		4999103C2A941EAE00874F4F /* TextHighlighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4999103B2A941EAE00874F4F /* TextHighlighter.swift */; };
 		49AE18812A5B6A2F0030AEAC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 49AE18802A5B6A2F0030AEAC /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		49AE18832A5B6A2F0030AEAC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 49AE18822A5B6A2F0030AEAC /* FirebaseAuth */; };
 		49AE18852A5B6A2F0030AEAC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 49AE18842A5B6A2F0030AEAC /* FirebaseFirestore */; };
 		49AE18882A5CB7680030AEAC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 49AE18872A5CB7680030AEAC /* FirebaseStorage */; };
+		4D156F8A08C685BA586D6E8E /* Pods_ShonenEnglish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2118E278568D53764C6BFAE8 /* Pods_ShonenEnglish.framework */; };
+		6976636C1593050567D8CA50 /* Pods_ShonenEnglishTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C986D4D1E28B92F29B191912 /* Pods_ShonenEnglishTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2118E278568D53764C6BFAE8 /* Pods_ShonenEnglish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShonenEnglish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2251468D1958905E76DA770D /* Pods-ShonenEnglish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShonenEnglish.release.xcconfig"; path = "Target Support Files/Pods-ShonenEnglish/Pods-ShonenEnglish.release.xcconfig"; sourceTree = "<group>"; };
+		36CBE1DABDED8CACE38E1D06 /* Pods-ShonenEnglish-ShonenEnglishUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShonenEnglish-ShonenEnglishUITests.release.xcconfig"; path = "Target Support Files/Pods-ShonenEnglish-ShonenEnglishUITests/Pods-ShonenEnglish-ShonenEnglishUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4907D4FF2A10502600F8C3BB /* ShonenEnglish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShonenEnglish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4907D5022A10502600F8C3BB /* ShonenEnglishApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShonenEnglishApp.swift; sourceTree = "<group>"; };
 		4907D5062A10502700F8C3BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,7 +87,16 @@
 		495B80CA2A7C6913006CA0D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		495B80CC2A7C691D006CA0D1 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		497967772A886AB600019F83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		497967792A8CFDB000019F83 /* AdMobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobView.swift; sourceTree = "<group>"; };
+		4979677D2A8D810F00019F83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4990FD9F2A8719D300769B17 /* ColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
+		4999103B2A941EAE00874F4F /* TextHighlighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextHighlighter.swift; sourceTree = "<group>"; };
+		4AE3D501639872BF1CF5310D /* Pods-ShonenEnglish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShonenEnglish.debug.xcconfig"; path = "Target Support Files/Pods-ShonenEnglish/Pods-ShonenEnglish.debug.xcconfig"; sourceTree = "<group>"; };
+		7B014CD251FF4589FAE1DC7A /* Pods-ShonenEnglishTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShonenEnglishTests.debug.xcconfig"; path = "Target Support Files/Pods-ShonenEnglishTests/Pods-ShonenEnglishTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9C98EC2B255AB871D7CFDF28 /* Pods_ShonenEnglish_ShonenEnglishUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShonenEnglish_ShonenEnglishUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A914013D0B1AAC0A089D92BC /* Pods-ShonenEnglishTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShonenEnglishTests.release.xcconfig"; path = "Target Support Files/Pods-ShonenEnglishTests/Pods-ShonenEnglishTests.release.xcconfig"; sourceTree = "<group>"; };
+		C986D4D1E28B92F29B191912 /* Pods_ShonenEnglishTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShonenEnglishTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F60C3E33E9E30133790DB986 /* Pods-ShonenEnglish-ShonenEnglishUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShonenEnglish-ShonenEnglishUITests.debug.xcconfig"; path = "Target Support Files/Pods-ShonenEnglish-ShonenEnglishUITests/Pods-ShonenEnglish-ShonenEnglishUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +108,8 @@
 				49AE18882A5CB7680030AEAC /* FirebaseStorage in Frameworks */,
 				49AE18832A5B6A2F0030AEAC /* FirebaseAuth in Frameworks */,
 				49AE18852A5B6A2F0030AEAC /* FirebaseFirestore in Frameworks */,
+				4979677C2A8D785200019F83 /* FirebaseAnalyticsSwift in Frameworks */,
+				4D156F8A08C685BA586D6E8E /* Pods_ShonenEnglish.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6976636C1593050567D8CA50 /* Pods_ShonenEnglishTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,12 +125,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ED7D3BF017E016FC76197FB /* Pods_ShonenEnglish_ShonenEnglishUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13287376375F37B59A77A0F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2118E278568D53764C6BFAE8 /* Pods_ShonenEnglish.framework */,
+				9C98EC2B255AB871D7CFDF28 /* Pods_ShonenEnglish_ShonenEnglishUITests.framework */,
+				C986D4D1E28B92F29B191912 /* Pods_ShonenEnglishTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		37CB891E40C15DC6DC32BFDD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4AE3D501639872BF1CF5310D /* Pods-ShonenEnglish.debug.xcconfig */,
+				2251468D1958905E76DA770D /* Pods-ShonenEnglish.release.xcconfig */,
+				F60C3E33E9E30133790DB986 /* Pods-ShonenEnglish-ShonenEnglishUITests.debug.xcconfig */,
+				36CBE1DABDED8CACE38E1D06 /* Pods-ShonenEnglish-ShonenEnglishUITests.release.xcconfig */,
+				7B014CD251FF4589FAE1DC7A /* Pods-ShonenEnglishTests.debug.xcconfig */,
+				A914013D0B1AAC0A089D92BC /* Pods-ShonenEnglishTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		4907D4F62A10502600F8C3BB = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +162,8 @@
 				4907D5132A10502700F8C3BB /* ShonenEnglishTests */,
 				4907D51D2A10502700F8C3BB /* ShonenEnglishUITests */,
 				4907D5002A10502600F8C3BB /* Products */,
-				49AE18862A5CB7680030AEAC /* Frameworks */,
+				37CB891E40C15DC6DC32BFDD /* Pods */,
+				13287376375F37B59A77A0F5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +180,7 @@
 		4907D5012A10502600F8C3BB /* ShonenEnglish */ = {
 			isa = PBXGroup;
 			children = (
+				4979677D2A8D810F00019F83 /* Info.plist */,
 				4907D5022A10502600F8C3BB /* ShonenEnglishApp.swift */,
 				497967772A886AB600019F83 /* GoogleService-Info.plist */,
 				4907D5082A10502700F8C3BB /* ShonenEnglish.entitlements */,
@@ -179,6 +226,7 @@
 				4907D5302A10571100F8C3BB /* StartView.swift */,
 				4907D5322A10572A00F8C3BB /* TabViewWrapper.swift */,
 				4907D5342A10573A00F8C3BB /* View1.swift */,
+				497967792A8CFDB000019F83 /* AdMobView.swift */,
 				4907D5362A10574B00F8C3BB /* View2.swift */,
 				4907D5382A10575C00F8C3BB /* EndView.swift */,
 			);
@@ -193,15 +241,9 @@
 				4937BE102A623F3F005263CF /* AVSpeechSynthesizer.swift */,
 				495B80BD2A760A37006CA0D1 /* BarVisibilityPublisher.swift */,
 				4990FD9F2A8719D300769B17 /* ColorModel.swift */,
+				4999103B2A941EAE00874F4F /* TextHighlighter.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		49AE18862A5CB7680030AEAC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,9 +253,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4907D5242A10502700F8C3BB /* Build configuration list for PBXNativeTarget "ShonenEnglish" */;
 			buildPhases = (
+				250B211498F702AEBB986524 /* [CP] Check Pods Manifest.lock */,
 				4907D4FB2A10502600F8C3BB /* Sources */,
 				4907D4FC2A10502600F8C3BB /* Frameworks */,
 				4907D4FD2A10502600F8C3BB /* Resources */,
+				E3339D59F5CFE80FF61BF058 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,6 +269,7 @@
 				49AE18822A5B6A2F0030AEAC /* FirebaseAuth */,
 				49AE18842A5B6A2F0030AEAC /* FirebaseFirestore */,
 				49AE18872A5CB7680030AEAC /* FirebaseStorage */,
+				4979677B2A8D785200019F83 /* FirebaseAnalyticsSwift */,
 			);
 			productName = ShonenEinglish;
 			productReference = 4907D4FF2A10502600F8C3BB /* ShonenEnglish.app */;
@@ -234,6 +279,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4907D5272A10502700F8C3BB /* Build configuration list for PBXNativeTarget "ShonenEnglishTests" */;
 			buildPhases = (
+				5DD74C3C962C12F123155C0A /* [CP] Check Pods Manifest.lock */,
 				4907D50C2A10502700F8C3BB /* Sources */,
 				4907D50D2A10502700F8C3BB /* Frameworks */,
 				4907D50E2A10502700F8C3BB /* Resources */,
@@ -252,9 +298,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4907D52A2A10502700F8C3BB /* Build configuration list for PBXNativeTarget "ShonenEnglishUITests" */;
 			buildPhases = (
+				AB0F13C5A6DB86C43A0555BC /* [CP] Check Pods Manifest.lock */,
 				4907D5162A10502700F8C3BB /* Sources */,
 				4907D5172A10502700F8C3BB /* Frameworks */,
 				4907D5182A10502700F8C3BB /* Resources */,
+				817F2D9D86D83C7F63436F5B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -342,6 +390,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		250B211498F702AEBB986524 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShonenEnglish-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DD74C3C962C12F123155C0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShonenEnglishTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		817F2D9D86D83C7F63436F5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShonenEnglish-ShonenEnglishUITests/Pods-ShonenEnglish-ShonenEnglishUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShonenEnglish-ShonenEnglishUITests/Pods-ShonenEnglish-ShonenEnglishUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShonenEnglish-ShonenEnglishUITests/Pods-ShonenEnglish-ShonenEnglishUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB0F13C5A6DB86C43A0555BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShonenEnglish-ShonenEnglishUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3339D59F5CFE80FF61BF058 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShonenEnglish/Pods-ShonenEnglish-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShonenEnglish/Pods-ShonenEnglish-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShonenEnglish/Pods-ShonenEnglish-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4907D4FB2A10502600F8C3BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -349,7 +500,9 @@
 			files = (
 				495B80BE2A760A37006CA0D1 /* BarVisibilityPublisher.swift in Sources */,
 				4907D5032A10502600F8C3BB /* ShonenEnglishApp.swift in Sources */,
+				4999103C2A941EAE00874F4F /* TextHighlighter.swift in Sources */,
 				4907D5392A10575C00F8C3BB /* EndView.swift in Sources */,
+				4979677A2A8CFDB000019F83 /* AdMobView.swift in Sources */,
 				4937BE112A623F3F005263CF /* AVSpeechSynthesizer.swift in Sources */,
 				4907D53E2A10579B00F8C3BB /* ComicData.swift in Sources */,
 				4907D52E2A1056EA00F8C3BB /* SplashView.swift in Sources */,
@@ -423,6 +576,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -452,6 +606,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -481,6 +636,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -510,6 +666,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -530,18 +687,24 @@
 		};
 		4907D5252A10502700F8C3BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4AE3D501639872BF1CF5310D /* Pods-ShonenEnglish.debug.xcconfig */;
 			buildSettings = {
+				ADMOB_BANNER_UNIT_ID1 = "ca-app-pub-3940256099942544/2934735716";
+				ADMOB_BANNER_UNIT_ID2 = "ca-app-pub-3940256099942544/2934735716";
+				ADMOB_INLINE_ADAPTIVE_BANNER_UNIT_ID = "ca-app-pub-3940256099942544/2435281174";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ShonenEnglish/ShonenEnglish.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ShonenEnglish/Preview Content\"";
 				DEVELOPMENT_TEAM = ZC259YH7LZ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShonenEnglish/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -553,10 +716,10 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kzscript.ShonenEnglish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -572,18 +735,24 @@
 		};
 		4907D5262A10502700F8C3BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2251468D1958905E76DA770D /* Pods-ShonenEnglish.release.xcconfig */;
 			buildSettings = {
+				ADMOB_BANNER_UNIT_ID1 = "ca-app-pub-2076115814043994/5003371749";
+				ADMOB_BANNER_UNIT_ID2 = "ca-app-pub-2076115814043994/9455792072";
+				ADMOB_INLINE_ADAPTIVE_BANNER_UNIT_ID = "ca-app-pub-2076115814043994/6701937545";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ShonenEnglish/ShonenEnglish.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ShonenEnglish/Preview Content\"";
 				DEVELOPMENT_TEAM = ZC259YH7LZ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ShonenEnglish/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -595,10 +764,10 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kzscript.ShonenEnglish;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -614,11 +783,13 @@
 		};
 		4907D5282A10502700F8C3BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B014CD251FF4589FAE1DC7A /* Pods-ShonenEnglishTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = ZC259YH7LZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
@@ -637,11 +808,13 @@
 		};
 		4907D5292A10502700F8C3BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A914013D0B1AAC0A089D92BC /* Pods-ShonenEnglishTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = ZC259YH7LZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
@@ -660,10 +833,12 @@
 		};
 		4907D52B2A10502700F8C3BB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F60C3E33E9E30133790DB986 /* Pods-ShonenEnglish-ShonenEnglishUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = ZC259YH7LZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
@@ -682,10 +857,12 @@
 		};
 		4907D52C2A10502700F8C3BB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36CBE1DABDED8CACE38E1D06 /* Pods-ShonenEnglish-ShonenEnglishUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = ZC259YH7LZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
@@ -755,6 +932,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4979677B2A8D785200019F83 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49AE187F2A5B6A2F0030AEAC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
 		49AE18802A5B6A2F0030AEAC /* FirebaseAnalyticsWithoutAdIdSupport */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 49AE187F2A5B6A2F0030AEAC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
