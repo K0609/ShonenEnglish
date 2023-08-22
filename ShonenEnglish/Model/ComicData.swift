@@ -6,6 +6,8 @@ struct ComicData: Identifiable {
     let id = UUID()
     let quoteID: Int
     let quoteJa: String
+    let quoteJaHighlight: [String]
+    let quoteJaHighlightSub: [String]
     let characterJa: String
     let titleJa: String
     let authorJa: String
@@ -14,6 +16,8 @@ struct ComicData: Identifiable {
     let volume: Int
     let episode: Int
     let quoteEn: String
+    let quoteEnHighlight: [String]
+    let quoteEnHighlightSub: [String]
     let wordID: Int
     let wordEn: String
     let wordJa: String
@@ -48,6 +52,8 @@ struct ComicData: Identifiable {
     enum CodingKeys: String, CodingKey {
         case quoteID
         case quoteJa
+        case quoteJaHighlight
+        case quoteJaHighlightSub
         case characterJa
         case titleJa
         case authorJa
@@ -56,6 +62,8 @@ struct ComicData: Identifiable {
         case volume
         case episode
         case quoteEn
+        case quoteEnHighlight
+        case quoteEnHighlightSub
         case wordID
         case wordEn
         case wordJa
@@ -94,6 +102,10 @@ extension ComicData: Decodable {
 
         quoteID = try container.decode(Int.self, forKey: .quoteID)
         quoteJa = try container.decode(String.self, forKey: .quoteJa)
+        let highlightStringJa = try container.decode(String.self, forKey: .quoteJaHighlight)
+        quoteJaHighlight = highlightStringJa.components(separatedBy: ",")
+        let highlightStringJaSub = try container.decode(String.self, forKey: .quoteJaHighlightSub)
+        quoteJaHighlightSub = highlightStringJaSub.components(separatedBy: ",")
         characterJa = try container.decode(String.self, forKey: .characterJa)
         titleJa = try container.decode(String.self, forKey: .titleJa)
         authorJa = try container.decode(String.self, forKey: .authorJa)
@@ -102,6 +114,10 @@ extension ComicData: Decodable {
         volume = try container.decode(Int.self, forKey: .volume)
         episode = try container.decode(Int.self, forKey: .episode)
         quoteEn = try container.decode(String.self, forKey: .quoteEn)
+        let highlightStringEn = try container.decode(String.self, forKey: .quoteEnHighlight)
+        quoteEnHighlight = highlightStringEn.components(separatedBy: ",")
+        let highlightStringEnSub = try container.decode(String.self, forKey: .quoteEnHighlightSub)
+        quoteEnHighlightSub = highlightStringEnSub.components(separatedBy: ",")
         wordID = try container.decode(Int.self, forKey: .wordID)
         wordEn = try container.decode(String.self, forKey: .wordEn)
         wordJa = try container.decode(String.self, forKey: .wordJa)

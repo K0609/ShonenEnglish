@@ -9,14 +9,23 @@ struct TabViewWrapper: View {
     @State private var isBarVisible = false
     var selectedModeLa: Int // 日本語->EngかEng->日本語か
     var selectedModeWorS: Int //単語か文章か
-
+    private let adViewCount: Int = 2
+    
     var body: some View {
         ZStack {
             //本画面
             TabView(selection: $selectedIndex) {
-                //最終ページ
+                // EndView
                 EndView(selectedIndex: $selectedIndex, isBarVisible: $isBarVisible, selectedLevel: selectedLevel)
-                    .tag(comicViewModel.comicDataList.count * 2)
+                    .tag(comicViewModel.comicDataList.count * 2 + adViewCount) // AdViewの数を考慮してtagを更新
+                
+                // AdViewを指定した数だけ表示
+                ForEach((1...adViewCount).reversed(), id: \.self) { adIndex in
+                    let adUnitIDKey = adIndex == 1 ? "AdMobBannerUnitID1" : "AdMobBannerUnitID2"
+                    AdView(adUnitIDKey: adUnitIDKey)
+                            .tag(comicViewModel.comicDataList.count * 2 + adIndex - 1)
+                }
+                
                 //View1とView2
                 ForEach((0..<comicViewModel.comicDataList.count * 2).reversed(), id: \.self) { index in
                     if index % 2 == 0 {
@@ -70,9 +79,9 @@ struct TabViewWrapper: View {
                     Spacer()
 
                     HStack {
-                        //最後のページへ
+                        //EndViewへ
                         Button(action: {
-                            selectedIndex = comicViewModel.comicDataList.count * 2
+                            selectedIndex = comicViewModel.comicDataList.count * 2 + adViewCount
                         }) {
                             Image(systemName: "arrowshape.left.fill")
                                 .foregroundColor(.primary)

@@ -34,6 +34,7 @@ struct View1: View {
             
             SpeakerButton(text: contentText(), language: languageCode())
         }
+        .analyticsScreen(name: "main_content")
     }
 }
 

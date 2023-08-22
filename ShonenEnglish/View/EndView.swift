@@ -63,5 +63,6 @@ struct EndView: View {
             }
         }
         .padding()
+        .analyticsScreen(name: "main_content")
     }
 }

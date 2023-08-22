@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "https://www.instagram.com/p/Cv02jl1vwhg/?img_index=1",
+        "type": 301
+      }
+    ]
+  }
+}
